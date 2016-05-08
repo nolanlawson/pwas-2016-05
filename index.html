@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Progressive Web Apps</title>
+
+		<meta name="description" content="Progressive Web Apps"">
+		<meta name="author" content="Nolan Lawson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="index.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h2>Progressive Web Apps</h2>
+            <h4>@nolanlawson</h4>
+          
+        </section>
+
+				<section>
+					<h4>@nolanlawson</h4>
+
+					<img class="no-border" src="img/me.jpg" alt="photo of Nolan Lawson"/>
+
+					
+				</section>
+
+        <section>
+
+          <img class="no-border" style="display:inline-block" height="150" src="img/pouchdb.png" alt="pouchdb"/>
+          
+        </section>
+
+        <section>
+          <h2>What is a <br/> "progressive web app"?</h2>
+        </section>
+
+        <section>
+          <h3>Nebulous term, somewhat like:</h3>
+          <ul>
+            <li>Ajax</li>
+            <li>Responsive</li>
+            <li>Mobile-first</li>
+            <li>etc.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Coined by Alex Russell of Google</h4>
+          <img src="img/tabs_soul.png"/>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <h4>Alex Russell</h4>
+          <img src="img/alex_russell.png"/>
+        </section>
+
+        <section>
+          <video height="600" src="vid/voicememos1.webm" autoplay loop/>
+        </section>
+
+        <section>
+          <video height="600" src="vid/voicememos3-d.webm" autoplay loop/>
+        </section>
+
+        <section>
+          <video height="600" src="vid/voicememos2.webm" autoplay loop/>
+        </section>
+
+        <section>
+          <video height="600" src="vid/voicememos4.webm" autoplay loop/>
+        </section>
+
+        <section>
+          <h3>What makes a progressive web app?</h3>
+          <ul>
+            <li>Native-like characteristics</li>
+            <li>Promoted by browser chrome</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Native-like characteristics</h3>
+          <ul>
+            <li>Works offline</li>
+            <li>Launches from home screen</li>
+            <li>Hides URL bar</li>
+            <li>Branded colors</li>
+            <li>"First class" treatment in OS</li>
+            <li>Push notifications (optional)</li>
+            <li>Background sync (optional)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Promoted by browser chrome</h3>
+          <ul>
+            <li>"Add to home screen?" popup <br/> (aka the "carrot")</li>
+          </ul>
+
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              https://medium.com/@slightlylate/mmmmmmm-carrots-6b3a53719008#.ece5xoohm
+            </small>
+          </div>
+
+        </section>
+
+        <section>
+          <h3>Chrome</h3>
+          <img class="no-border" src="img/add_to_home_screen_chrome.jpg"/>
+        </section>
+
+        <section>
+          <h3>Opera</h3>
+          <img class="no-border" src="img/add_to_home_screen_opera.png" height="550"/>
+        </section>
+
+        <section>
+          <h3>Firefox</h3>
+          <img class="no-border" src="img/add_to_home_screen_ff.jpg" height="550"/>
+        </section>
+
+        <section>
+          <h4>Hamster break</h4>
+          <video height="600" src="vid/GiganticOblongLark.webm" autoplay loop/>
+        </section>
+
+        <section>
+          <h3>How do we eat that sweet, sweet carrot?</h3>
+          <img class="no-border" src="img/carrot.png" height="400"/>
+        </section>
+
+        <section>
+          <h4>Requirements for the install banner</h4>
+          <ul>
+            <li>Web Manifest file</li>
+            <ul style="font-size: 28px;">
+              <li>short_name</li>
+              <li>URL</li>
+              <li>PNG icon</li>
+            </ul>
+            <li>Service Worker</li>
+            <li>HTTPS</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <h4>Soft requirements for PWAs</h4>
+          <ul>
+            <li>Theme color</li>
+            <li>App shell</li>
+            <li>IndexedDB</li>
+            <li>60FPS animations</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+          http://stackoverflow.com/tags/progressive-web-apps/info
+            </small>
+          </div>
+        </section>
+
+
+      </div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/jquery-1.9.1.js"></script>
+		<script src="js/highcharts.js"></script>
+		<script src="js/highcharts-exporting.js"></script>
+    <script src="js/ua.js"></script>
+
+    <script src="js/randomColor.js"></script>
+
+		<script>
+
+      var randomizedTextTimeout;
+
+      function randomizeText(slide) {
+        var rando = slide.querySelector('.random-color');
+        if (rando) {
+          randomizedTextTimeout = setInterval(function () {
+            requestAnimationFrame(function () {
+              if (!rando.dataset.colorized) {
+                var text = rando.innerText;
+                var newText = '';
+                for (var i = 0; i < text.length; i++) {
+                  newText += '<span style="color:' + randomColor() + '">' + text.charAt(i) + '</span>';
+                }
+                rando.innerHTML = newText;
+                rando.dataset.colorized = true;
+              } else {
+                var spans = rando.querySelectorAll('span');
+                for (var i = 0; i < spans.length; i++) {
+                  spans[i].style.color = randomColor();
+                }
+              }
+            });
+          }, 100);
+        }
+      }
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+        fragments: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        var notes = event.currentSlide.querySelector(".notes");
+        if(notes) {
+          console.info(notes.innerHTML.replace(/\n\s+/g,'\n'));
+        }
+
+        clearInterval(randomizedTextTimeout);
+        randomizeText(event.currentSlide);
+      } );
+
+      Reveal.addEventListener('fragmentshown', function (e) {
+        // show the animations
+        $(e.target).find('li span').each(function (i, el) {
+          $(el).addClass('anim' + (i + 1));
+        });
+      });
+
+      Reveal.addEventListener('fragmenthidden', function (e) {
+        // hide the animations
+        $(e.target).find('li span').each(function (i, el) {
+          $(el).removeClass('anim' + (i + 1));
+        });
+      });
+
+      // log the first slide's notes as well
+      var notes = document.querySelector('section.present aside.notes');
+      if (notes) {
+        console.info(notes.innerHTML.replace(/\n\s+/g, '\n'));
+      }
+
+      randomizeText(document.querySelector('section.present'));
+
+      if (!UA.isChrome() && !UA.isFirefox() && !UA.isAndroid() && !UA.isOpera()) {
+        window.alert(
+          'Heads up! This presentation looks best in ' +
+          'Firefox/Chrome due to WEBM video and image-rendering:pixelated. Sorry!');
+      }
+
+      window.brooklynJSMode = function () {
+        document.body.style.transform = 'translateY(-100px) scale(0.9, 0.9)';
+      }
+
+    </script>
+
+	</body>
+</html>
