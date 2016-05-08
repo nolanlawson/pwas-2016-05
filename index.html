@@ -94,19 +94,19 @@
         </section>
 
         <section>
-          <video height="600" src="vid/voicememos1.webm" autoplay loop/>
+          <video height="600" src="vid/voicememos1.webm" />
         </section>
 
         <section>
-          <video height="600" src="vid/voicememos3-d.webm" autoplay loop/>
+          <video height="600" src="vid/voicememos3-d.webm" />
         </section>
 
         <section>
-          <video height="600" src="vid/voicememos2.webm" autoplay loop/>
+          <video height="600" src="vid/voicememos2.webm" />
         </section>
 
         <section>
-          <video height="600" src="vid/voicememos4.webm" autoplay loop/>
+          <video height="600" src="vid/voicememos4.webm" />
         </section>
 
         <section>
@@ -161,7 +161,7 @@
 
         <section>
           <h4>Hamster break</h4>
-          <video height="600" src="vid/GiganticOblongLark.webm" autoplay loop/>
+          <video height="600" src="vid/GiganticOblongLark.webm" />
         </section>
 
         <section>
@@ -265,6 +265,22 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+      
+      function playVideo() {
+        var videos = Array.from(
+          document.querySelectorAll('section.present video'));
+        videos.forEach(function (vid) {
+          vid.loop = true;
+          vid.currentTime = 0;
+          vid.play();
+        });
+
+        var otherVideos = Array.from(document.querySelectorAll('section.past video')).concat(
+          Array.from(document.querySelectorAll('section.future video')));
+        otherVideos.forEach(function (vid) {
+          vid.pause();
+        });
+      }
 
       Reveal.addEventListener( 'slidechanged', function( event ) {
         // event.previousSlide, event.currentSlide, event.indexh, event.indexv
@@ -272,6 +288,8 @@
         if(notes) {
           console.info(notes.innerHTML.replace(/\n\s+/g,'\n'));
         }
+        
+        playVideo();
 
         clearInterval(randomizedTextTimeout);
         randomizeText(event.currentSlide);
@@ -296,6 +314,8 @@
       if (notes) {
         console.info(notes.innerHTML.replace(/\n\s+/g, '\n'));
       }
+
+      playVideo();
 
       randomizeText(document.querySelector('section.present'));
 
