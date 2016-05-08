@@ -349,8 +349,143 @@ meta.content = '#4169E1';</code></pre>
 
         <section>
           <h3>App Shell</h3>
-          <img src="img/appshell-1.jpg" height="550"/>
         </section>
+
+        <section>
+          <img class="no-border" src="img/appshell-1.jpg" height="550"/>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              https://developers.google.com/web/updates/2015/11/app-shell
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <h4>AKA:</h4>
+          <ul>
+            <li>Progressive rendering</li>
+            <li>Progressive enhancement</li>
+            <li>Not showing a blank screen w/o JS</li>
+          </ul>
+        </section>
+
+        <section>
+          <video src="vid/voice-memos-load.webm" height="600"/>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              (Simulated 2G)
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <h3>Strategies</h3>
+          <ul>
+            <li>Server-side HTML</li>
+            <ul>
+              <li>React</li>
+              <li>Ember Fastboot</li>
+              <li>Hyperscript (virtual-dom)</li>
+              <li>etc.</li>
+            </ul>
+            <li>Turn off JS to see effect</li>
+            <li>Load in 2G to see progressive loading</li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h3>IndexedDB/WebSQL for data storage</h3>
+        </section>
+
+        <section>
+          <img class="no-border" src="img/voice-memos-with-memos.png" height="550"/>
+        </section>
+
+        <section>
+          <div style="position:relative">
+            <img style="z-index:1000;"
+                 class="no-border" src="img/appshell-1.jpg" height="550"/>
+            <div class="fragment" style="position:absolute;z-index:2000;left:0;top:0;right:0;bottom:0">
+              <img class="no-border" src="img/appshell-2.jpeg" height="550"/>
+            </div>
+            <div class="fragment" style="position:absolute;z-index:3000;left:0;top:0;right:0;bottom:0">
+              <img class="no-border" src="img/appshell-3.jpeg" height="550"/>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Pokédex IDB</h3>
+          <h4>4.0M Chrome / 5.6M Firefox</h4>
+          <img class="no-border" src="img/pokedex-idb.png" height="600"/>
+        </section>
+
+        <section>
+          <h3>Why IDB + WebSQL?</h3>
+          <img src="img/caniuse-idb.png"/>
+        </section>
+
+        <section>
+          <h3>IndexedDB libraries</h3>
+          <ul>
+            <li>LocalForage</li>
+            <li>PouchDB</li>
+            <li>Dexie</li>
+            <li>YDN-DB</li>
+            <li>indexeddb-promised</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Extra credit: web workers</h3>
+          <ul>
+            <li>IDB is fast, but blocks the DOM</li>
+            <li>Web Workers mitigate this</li>
+            <li>No IDB+WW in Safari; use pseudo-worker</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+              http://nolanlawson.github.io/database-comparison/ <br/>
+              http://nolanlawson.com/2015/09/29/indexeddb-websql-localstorage-what-blocks-the-dom/
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <h3>60FPS animations</h3>
+        </section>
+
+        <section>
+          <h4>Only use hardware-accelerated:</h4>
+          <ul>
+            <li>transform</li>
+            <li>opacity</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+          http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
+              </small>
+            </div>
+        </section>
+
+        <section>
+          <a href="https://www.youtube.com/watch?v=zrkCr1FThn0">https://www.youtube.com/watch?v=zrkCr1FThn0</a>
+        </section>
+
+        <section>
+          <h3>FLIP animations</h3>
+          <ul>
+            <li>Flexibility of JS, performance of CSS</li>
+            <li>Technique, not a library</li>
+            <li>First - Last - Invert - Play</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <small class="text-muted">
+          https://aerotwist.com/blog/flip-your-animations/
+              </small></div>
+        </section>
+
       </div>
 		</div>
 
