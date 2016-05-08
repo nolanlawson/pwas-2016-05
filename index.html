@@ -131,6 +131,11 @@
         </section>
 
         <section>
+          <h4>Hamster break</h4>
+          <video height="600" src="vid/GiganticOblongLark.webm" />
+        </section>
+
+        <section>
           <h3>Promoted by browser chrome</h3>
           <ul>
             <li>"Add to home screen?" popup <br/> (aka the "carrot")</li>
@@ -157,11 +162,6 @@
         <section>
           <h3>Firefox</h3>
           <img class="no-border" src="img/add_to_home_screen_ff.jpg" height="550"/>
-        </section>
-
-        <section>
-          <h4>Hamster break</h4>
-          <video height="600" src="vid/GiganticOblongLark.webm" />
         </section>
 
         <section>
@@ -239,7 +239,63 @@
         </section>
 
         <section>
+          <h4>Bad old days: App Cache</h4>
+          <pre><code language="bash">CACHE MANIFEST
+# rev 2016-04-28 08:44:48 -0400
+
+CACHE:
+/adapters.html
+/api.html
+/static/css/pouchdb.css
+/static/favicon.ico
+/static/js/code.min.js
+/static/img/fauxton.png
+/static/img/kittens.jpg
+http://code.jquery.com/jquery.min.js
+http://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700
+
+NETWORK:
+*</code></pre>
+        </section>
+
+        <section>
           <img src="img/service-worker-jaffa.png"/>
+        </section>
+
+        <section>
+          <h3>Service Worker in a nutshell</h3>
+          <ul>
+            <li>Web Worker on steroids</li>
+            <li>Process/security of Shared Worker</li>
+            <li>Programmable client-side proxy</li>
+            <li>HTTPS required (except localhost)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Web Workers vs Service Workers</h3>
+          <img src="img/worker-types.png" alt="Types of workers"/>
+          <div>
+            <small class="text-muted">Source: <a href="https://docs.google.com/document/d/1i3IA3TG00rpQ7MKlpNFYUF6EfLcV01_Cv3IYG_DjF7M/edit#">Blink report on workers</a></small>
+          </div>
+          <aside class="notes">
+            Types of workers.
+          </aside>
+        </section>
+
+        <section>
+          <h3>Useful SW tools</h3>
+          <ul>
+            <li>sw-precache</li>
+            <li>sw-toolbox</li>
+            <li>offline-plugin (webpack)</li>
+            <li>UpUp</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Hamster break</h4>
+          <video height="600" src="vid/SilverEsteemedAstarte.webm" />
         </section>
 
         <section>
@@ -257,7 +313,44 @@
           </div>
         </section>
 
+        <section>
+          <h3>
+            Theme color
+          </h3>
+          <pre><code class="html">&lt;head&gt;
+&lt;!-- ... --&gt;
+  &lt;meta name=theme-color content=#a040a0&gt;
+&lt;!-- ... --&gt;
+&lt;/head&gt;</code></pre>
+          <div>
+            <small class="text-muted">
+              https://github.com/whatwg/html/commit/05e4a1f6c4941273baa647b8e889d2db7fd9bd88
+            </small>
+          </div>
+        </section>
 
+        <section>
+          <img class="no-border" src="img/pokedex-theme-color.png" height="550" />
+        </section>
+
+        <section>
+          <video src="vid/app-switcher.webm" height="600"/>
+        </section>
+
+        <section>
+          <h3>Dynamic theme color</h3>
+          <pre><code class="javascript">var meta = document.head.querySelector('meta[name="theme-color"]');
+meta.content = '#4169E1';</code></pre>
+        </section>
+
+        <section>
+          <video src="vid/pokedex-blog-3.webm" height="600"/>
+        </section>
+
+        <section>
+          <h3>App Shell</h3>
+          <img src="img/appshell-1.jpg" height="550"/>
+        </section>
       </div>
 		</div>
 
