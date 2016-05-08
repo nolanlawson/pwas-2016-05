@@ -1,4 +1,4 @@
-IndexedDB: the good parts
+Progressive Web Apps workshop
 =====
 
-Nolan's presentation for Offline First meetup, Boston March 2016 
+Nolan's workshop on Progressive Web Apps for JSConfBP.
